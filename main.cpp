@@ -1,6 +1,8 @@
 #include <iostream>
+#include "include/emu.h"
+int main(int argc, char ** argv) {
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    auto emu = new EmuContext(argv[1],argc,argv);
+
+    return emu->emu_run(argc,argv);
 }

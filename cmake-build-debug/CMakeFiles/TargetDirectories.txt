@@ -1,3 +1,4 @@
 /Users/fernando/repos/gbemu/gbemu/cmake-build-debug/CMakeFiles/gbemu.dir
+/Users/fernando/repos/gbemu/gbemu/cmake-build-debug/CMakeFiles/gbemu_lib.dir
 /Users/fernando/repos/gbemu/gbemu/cmake-build-debug/CMakeFiles/edit_cache.dir
 /Users/fernando/repos/gbemu/gbemu/cmake-build-debug/CMakeFiles/rebuild_cache.dir

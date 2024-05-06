@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,7 +31,8 @@
 					"name" : "gbemu",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -39,8 +41,15 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "gbemu::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-gbemu-Debug-76286063386f0a9f58e8.json",
+					"jsonFile" : "target-gbemu-Debug-ba99b4c7eb988aca2e02.json",
 					"name" : "gbemu",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gbemu_lib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gbemu_lib-Debug-c61bd8e8a7f5f513ede9.json",
+					"name" : "gbemu_lib",
 					"projectIndex" : 0
 				}
 			]

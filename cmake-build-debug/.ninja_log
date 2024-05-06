@@ -1,0 +1,18 @@
+# ninja log v5
+0	61	1714975350305259892	build.ninja	3c48532ac2d029bb
+5	661	1714974826546304605	CMakeFiles/gbemu.dir/main.cpp.o	d2d9d111f323197c
+4	533	1714968469567508908	CMakeFiles/gbemu.dir/lib/cart.cpp.o	b1eef2cd2f869d2d
+11	566	1714972749310337978	CMakeFiles/gbemu_lib.dir/lib/cart.cpp.o	f45604e3881b36eb
+3	119	1714968469153060654	CMakeFiles/gbemu.dir/lib/timer.cpp.o	d0d3b881062e2686
+4	119	1714968469153058862	CMakeFiles/gbemu.dir/lib/common.cpp.o	21b400c4f5c157c7
+4	119	1714968469153059279	CMakeFiles/gbemu.dir/lib/bus.cpp.o	8d4f3e0921077857
+12	142	1714972748887775367	CMakeFiles/gbemu_lib.dir/lib/timer.cpp.o	8a5f2f0ca63e7cb
+4	432	1714968469465898686	CMakeFiles/gbemu.dir/lib/cpu.cpp.o	1e777337bd87d070
+12	142	1714972748887775451	CMakeFiles/gbemu_lib.dir/lib/bus.cpp.o	5fa34dc1366fa117
+3	492	1714968469525491147	CMakeFiles/gbemu.dir/lib/emu.cpp.o	b49e7b0b9fcb88f6
+5	603	1714974720367382322	CMakeFiles/gbemu_lib.dir/lib/emu.cpp.o	f9572af53a81ddbb
+12	449	1714972749193526834	CMakeFiles/gbemu_lib.dir/lib/cpu.cpp.o	fb225f15094cea25
+604	633	1714974720402188000	libgbemu_lib.a	6bb823ab46391ae0
+0	83	1714975350305259892	build.ninja	3c48532ac2d029bb
+15	688	1714975350998537209	CMakeFiles/gbemu.dir/main.cpp.o	bc1e907c80373047
+688	869	1714975351180121640	gbemu	146526784b0413ef
