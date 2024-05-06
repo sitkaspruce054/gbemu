@@ -44,9 +44,13 @@ public:
 
     struct rom_head *rom_head;
 
-    char *raw_data;
+    std::vector<unsigned char> raw_data;
 
     explicit Cartridge(char * cart);
 
     int read_rom(char *cart);
+
+    u8 cart_read(u16 address);
+
+    void cart_write(u16 address, u8 value);
 };

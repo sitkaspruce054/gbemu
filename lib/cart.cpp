@@ -108,29 +108,42 @@ static const char *LIC_CODE[0xA5] = {
 
 
 Cartridge::Cartridge(char *cart) {
-    ifstream rom_file (cart,ios::binary);
-    rom_file.unsetf(ios::skipws);
-    streampos file_size;
-    rom_file.seekg(0,ios::end);
-    file_size = rom_file.tellg();
-    rom_file.seekg(0,ios::beg);
-    std::vector<char> vec;
-    vec.reserve(file_size);
-    vec.insert(vec.begin(), istreambuf_iterator<char>(rom_file),istreambuf_iterator<char>());
-    raw_data = vec.data();
-    rom_data = vec;
-    rom_head = (struct rom_head *)(raw_data + 0x100);
-    rom_head->title[15] = 0;
+    cout << cart;
+    std::ifstream file(cart,std::ios::binary);
+    if (file.is_open()) {
+        std::cout << "ok\n";
+    }
+    file.seekg(0,std::ios::end);
+    int file_size = file.tellg();
+    file.seekg(0,std::ios::beg);
 
-    printf("\t Title: %s\n",rom_head->title);
+    vector< unsigned char> vec(file_size);
+
+    file.read((char *)&vec[0], file_size);
+    file.close();
+
+
 
     uint16_t x = 0;
 
-    for(uint16_t i = 0x0134; i <= 0x014C; i++) {
-        x = x - rom_data[i] - 1;
+    for (uint16_t i = 0x0134; i <= 0x014C; i++) {
+        x = x - vec[i] - 1;
     }
+    rom_head = (struct rom_head *)(vec.data() + 0x100);
+    rom_head->title[15] = 0;
+    uint8_t a = x & 0xFF;
+
+    char b = 5;
 
 
 
 }
 
+
+u8 Cartridge::cart_read(u16 address) {
+    return this->raw_data[address];
+}
+
+void Cartridge::cart_write(u16 address, u8 value) {
+    UNIMPLEMENTED
+}
