@@ -3,21 +3,15 @@
 
 #include "common.h"
 
-typedef struct {
-    u8 a;
-    u8 f;
-    u8 b;
-    u8 c;
-    u8 d;
-    u8 e;
-    u8 h;
-    u8 l;
-    u16 pc;
-    u16 sp;
-} registers;
+#include "registers.h"
 
+#include "instructions.h"
+
+#include "bus.h"
+
+#include "instructions.h"
 typedef struct {
-    registers regs;
+    Registers regs;
 
     u16 fetch_data;
 
@@ -25,15 +19,35 @@ typedef struct {
 
     u8 cur_opcode;
 
+    bool dest_is_mem;
+
+
     bool halt;
 
     bool stepping;
+
+
+
+    instruction cur_instruction;
+
 } state;
 class CPU {
 public:
 
     state state;
-    CPU();
+
+    Bus *bus;
+    CPU(Bus *bus);
 
     bool step();
+
+    void fetch();
+
+    void decode();
+
+
+    void execute();
+
+
+
 };

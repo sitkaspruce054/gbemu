@@ -18,13 +18,19 @@
  *
 */
 
-u8 Bus::bus_read(u16 address) {
-    if (address < 0x8000) {
-        return cart_read(address);
+Bus::Bus(Cartridge *cart) {
+    this->cart = cart;
+}
+
+
+u8 Bus::bus_read(u16 addr) {
+    if (addr < 0x8000) {
+        return this->cart->cart_read(addr);
     }
+
     UNIMPLEMENTED;
 }
 
-void Bus::bus_write(u16 address, u8 value) {
-    if (address < 0x8000)
+void Bus::bus_write(u16 address, u8 value, void (*mem_write)(u16 address, u8 value)) {
+    mem_write(address,value);
 }

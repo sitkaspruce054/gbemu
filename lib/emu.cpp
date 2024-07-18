@@ -30,9 +30,10 @@ EmuContext::delay( uint32_t ms)
 
 EmuContext::EmuContext(char * cart,int argc, char** argv) {
 
-    Cartridge* ct = new Cartridge(cart);
+    this->cart = new Cartridge(cart);
+    this->bus = new Bus(this->cart);
+    this->cpu = new CPU(this->bus);
 
-    cpu = CPU();
 
 
 
@@ -53,7 +54,7 @@ EmuContext::emu_run(int argc, char ** argv)
     std::cout << "SDL init called \n";
     TTF_Init();
     std::cout << "TTF init called";
-
+    this->running = true;
     while (this->running) {
 
         if (this->paused) {
@@ -61,7 +62,7 @@ EmuContext::emu_run(int argc, char ** argv)
             continue;
         }
 
-        if (!(this->cpu.step())) {
+        if (!(this->cpu->step())) {
             printf("CPU stopped \n");
             return -1;
         }

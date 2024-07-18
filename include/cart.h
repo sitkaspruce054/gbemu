@@ -13,7 +13,7 @@ public:
 
     uint32_t rom_size;
 
-    std::vector<char> rom_data;
+
 
     struct rom_head {
         uint8_t entry[4];

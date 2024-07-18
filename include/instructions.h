@@ -1,6 +1,8 @@
 //
 // Created by Fernando Gonzalez-Cruz on 5/6/24.
 //
+
+#pragma once
 #include "common.h"
 #ifndef GBEMU_INSTRUCTIONS_H
 #define GBEMU_INSTRUCTIONS_H
@@ -22,7 +24,12 @@ typedef enum {
     AM_HL_SPR,
     AM_D16,
     AM_D8,
-    AM_IMP,
+    AM_D16_R,
+    AM_MR_D8,
+    AM_MR,
+    AM_A16_R,
+    AM_R_A16
+
 
 
 } addr_mode;
@@ -45,6 +52,7 @@ typedef enum {
 } reg_type;
 
 typedef enum {
+    IN_NONE,
     IN_NOP,
     IN_LD,
     IN_INC,
@@ -74,6 +82,25 @@ typedef enum {
     IN_RET,
     IN_CB,
     IN_CALL,
+    IN_RETI,
+    IN_LDH,
+    IN_JPHL,
+    IN_DI,
+    IN_EI,
+    IN_RST,
+    IN_ERR,
+    //
+    IN_RLC,
+    IN_RRC,
+    IN_RL,
+    IN_RR,
+    IN_SLA,
+    IN_SRA,
+    IN_SWAP,
+    IN_SRL,
+    IN_BIT,
+    IN_RES,
+    IN_SET
 
 
 }instruction_type;
@@ -82,7 +109,13 @@ typedef enum {
     CT_NONE, CT_NZ, CT_Z, CT_NC, CT_C
 } cond_type;
 typedef struct {
-    addr_
+    instruction_type type;
+    addr_mode mode;
+    reg_type reg_1;
+    reg_type reg_2;
+    cond_type cond;
+    u8 param;
+
 } instruction;
 
 

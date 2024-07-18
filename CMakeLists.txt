@@ -11,7 +11,12 @@ set(LIB_FILES ${PROJECT_SOURCE_DIR}/lib/cart.cpp
         ${PROJECT_SOURCE_DIR}/lib/cpu.cpp
         ${PROJECT_SOURCE_DIR}/lib/bus.cpp
         ${PROJECT_SOURCE_DIR}/lib/emu.cpp
-        ${PROJECT_SOURCE_DIR}/lib/timer.cpp)
+        ${PROJECT_SOURCE_DIR}/lib/timer.cpp
+        include/instructions.h
+        include/registers.h
+        lib/instructions.cpp
+        lib/instruction_processors.cpp
+        lib/registers.cpp)
 add_library(gbemu_lib ${LIB_FILES})
 target_link_libraries(gbemu gbemu_lib
         SDL2::SDL2 SDL2_ttf::SDL2_ttf)

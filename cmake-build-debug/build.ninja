@@ -118,6 +118,27 @@ build CMakeFiles/gbemu_lib.dir/lib/timer.cpp.o: CXX_COMPILER__gbemu_lib_unscanne
   OBJECT_DIR = CMakeFiles/gbemu_lib.dir
   OBJECT_FILE_DIR = CMakeFiles/gbemu_lib.dir/lib
 
+build CMakeFiles/gbemu_lib.dir/lib/instructions.cpp.o: CXX_COMPILER__gbemu_lib_unscanned_Debug /Users/fernando/repos/gbemu/gbemu/lib/instructions.cpp || cmake_object_order_depends_target_gbemu_lib
+  DEP_FILE = CMakeFiles/gbemu_lib.dir/lib/instructions.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fcolor-diagnostics
+  INCLUDES = -I/Users/fernando/repos/gbemu/gbemu/include -I/Users/fernando/repos/gbemu/gbemu/include/SDL2 -I/Users/fernando/repos/gbemu/gbemu/include/SDL2_ttf
+  OBJECT_DIR = CMakeFiles/gbemu_lib.dir
+  OBJECT_FILE_DIR = CMakeFiles/gbemu_lib.dir/lib
+
+build CMakeFiles/gbemu_lib.dir/lib/instruction_processors.cpp.o: CXX_COMPILER__gbemu_lib_unscanned_Debug /Users/fernando/repos/gbemu/gbemu/lib/instruction_processors.cpp || cmake_object_order_depends_target_gbemu_lib
+  DEP_FILE = CMakeFiles/gbemu_lib.dir/lib/instruction_processors.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fcolor-diagnostics
+  INCLUDES = -I/Users/fernando/repos/gbemu/gbemu/include -I/Users/fernando/repos/gbemu/gbemu/include/SDL2 -I/Users/fernando/repos/gbemu/gbemu/include/SDL2_ttf
+  OBJECT_DIR = CMakeFiles/gbemu_lib.dir
+  OBJECT_FILE_DIR = CMakeFiles/gbemu_lib.dir/lib
+
+build CMakeFiles/gbemu_lib.dir/lib/registers.cpp.o: CXX_COMPILER__gbemu_lib_unscanned_Debug /Users/fernando/repos/gbemu/gbemu/lib/registers.cpp || cmake_object_order_depends_target_gbemu_lib
+  DEP_FILE = CMakeFiles/gbemu_lib.dir/lib/registers.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -fcolor-diagnostics
+  INCLUDES = -I/Users/fernando/repos/gbemu/gbemu/include -I/Users/fernando/repos/gbemu/gbemu/include/SDL2 -I/Users/fernando/repos/gbemu/gbemu/include/SDL2_ttf
+  OBJECT_DIR = CMakeFiles/gbemu_lib.dir
+  OBJECT_FILE_DIR = CMakeFiles/gbemu_lib.dir/lib
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target gbemu_lib
@@ -126,7 +147,7 @@ build CMakeFiles/gbemu_lib.dir/lib/timer.cpp.o: CXX_COMPILER__gbemu_lib_unscanne
 #############################################
 # Link the static library libgbemu_lib.a
 
-build libgbemu_lib.a: CXX_STATIC_LIBRARY_LINKER__gbemu_lib_Debug CMakeFiles/gbemu_lib.dir/lib/cart.cpp.o CMakeFiles/gbemu_lib.dir/lib/cpu.cpp.o CMakeFiles/gbemu_lib.dir/lib/bus.cpp.o CMakeFiles/gbemu_lib.dir/lib/emu.cpp.o CMakeFiles/gbemu_lib.dir/lib/timer.cpp.o
+build libgbemu_lib.a: CXX_STATIC_LIBRARY_LINKER__gbemu_lib_Debug CMakeFiles/gbemu_lib.dir/lib/cart.cpp.o CMakeFiles/gbemu_lib.dir/lib/cpu.cpp.o CMakeFiles/gbemu_lib.dir/lib/bus.cpp.o CMakeFiles/gbemu_lib.dir/lib/emu.cpp.o CMakeFiles/gbemu_lib.dir/lib/timer.cpp.o CMakeFiles/gbemu_lib.dir/lib/instructions.cpp.o CMakeFiles/gbemu_lib.dir/lib/instruction_processors.cpp.o CMakeFiles/gbemu_lib.dir/lib/registers.cpp.o
   ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles/gbemu_lib.dir

@@ -23,11 +23,14 @@ public:
     bool running; //whether it's running
     uint64_t ticks; //how it keeps time
 
+    uint64_t cycles;
     Cartridge* cart;
 
-    CPU cpu;
+    CPU* cpu;
 
     PPU* ppu;
+
+    Bus* bus;
 
 
 

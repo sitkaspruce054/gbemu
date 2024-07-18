@@ -117,7 +117,7 @@ Cartridge::Cartridge(char *cart) {
     int file_size = file.tellg();
     file.seekg(0,std::ios::beg);
 
-    vector< unsigned char> vec(file_size);
+    vector<unsigned char> vec(file_size);
 
     file.read((char *)&vec[0], file_size);
     file.close();
@@ -130,10 +130,10 @@ Cartridge::Cartridge(char *cart) {
         x = x - vec[i] - 1;
     }
     rom_head = (struct rom_head *)(vec.data() + 0x100);
-    rom_head->title[15] = 0;
-    uint8_t a = x & 0xFF;
 
-    char b = 5;
+    rom_head->title[15] = 0;
+    raw_data = vec;
+
 
 
 
