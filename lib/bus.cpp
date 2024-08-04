@@ -26,11 +26,15 @@ Bus::Bus(Cartridge *cart) {
 u8 Bus::bus_read(u16 addr) {
     if (addr < 0x8000) {
         return this->cart->cart_read(addr);
-    }
+    } else if (addr <0xA000) {
+        return ppu_vram_read(addr);
+    } else if (addr < 0xC000) {
+        return wram_read(addr)
+    } else if (addr < )
 
     UNIMPLEMENTED;
 }
 
-void Bus::bus_write(u16 address, u8 value, void (*mem_write)(u16 address, u8 value)) {
-    mem_write(address,value);
+void Bus::bus_write(u16 address, u8 value) {
+    this->cart->cart_write(address,value);
 }

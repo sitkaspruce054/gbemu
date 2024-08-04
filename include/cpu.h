@@ -8,6 +8,7 @@
 #include "instructions.h"
 
 #include "bus.h"
+#include "instruction_processors.h"
 
 #include "instructions.h"
 typedef struct {
@@ -37,11 +38,17 @@ public:
     state state;
 
     Bus *bus;
-    CPU(Bus *bus);
+    instruction_processors *instruction_rocessors;
+    CPU(Bus *bus,instruction_processors *instruction_processors);
 
-    bool step();
 
-    void fetch();
+    bool tick();
+
+    void fetch_opcode();
+
+    u16 fetch_word();
+
+    u8 fetch_byte();
 
     void decode();
 
@@ -49,5 +56,5 @@ public:
     void execute();
 
 
-
+    void opcode0x01();
 };

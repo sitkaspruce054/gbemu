@@ -34,5 +34,6 @@ public:
     u16 write_16(u16 dw, u8* reg_hi, u8 *reg_lo);
 
 
+    u8 toggle_flag(u8 flag, bool val);
 };
 #endif //GBEMU_REGISTERS_H

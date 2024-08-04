@@ -22,7 +22,14 @@ void Registers::set_flag(u8 flag) {
     f ^= (1 << flag);
 }
 
+
+
+
 u8 Registers::get_flag(u8 flag) {
     return f & (1 << flag);
+}
+
+u8 Registers::toggle_flag(u8 flag, bool val) {
+    (f & ~(1 << flag)) | (val << flag);
 }
 

@@ -16,7 +16,16 @@ set(LIB_FILES ${PROJECT_SOURCE_DIR}/lib/cart.cpp
         include/registers.h
         lib/instructions.cpp
         lib/instruction_processors.cpp
-        lib/registers.cpp)
+        lib/registers.cpp
+        include/instruction_processors.h
+        lib/common.cpp
+        lib/logger.cpp
+        include/logger.h
+        include/cpustate.h
+        lib/opcodes.cpp
+        lib/ppu.cpp
+        include/ppu.h
+)
 add_library(gbemu_lib ${LIB_FILES})
 target_link_libraries(gbemu gbemu_lib
         SDL2::SDL2 SDL2_ttf::SDL2_ttf)

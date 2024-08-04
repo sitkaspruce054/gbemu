@@ -13,9 +13,9 @@ public:
 
 
     Cartridge* cart;
-
+    u8 data[0xFFFF+1];
     Bus(Cartridge* cart);
 
     u8 bus_read(u16 address);
-    void bus_write(u16 address, u8 value, void (*mem_write)(u16 address, u8 value));
+    void bus_write(u16 address, u8 value);
 };

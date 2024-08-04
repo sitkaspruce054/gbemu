@@ -62,7 +62,7 @@ EmuContext::emu_run(int argc, char ** argv)
             continue;
         }
 
-        if (!(this->cpu->step())) {
+        if (!(this->cpu->tick())) {
             printf("CPU stopped \n");
             return -1;
         }
